@@ -48,9 +48,6 @@ If successful, the tool will reveal the real IP of the domain, even if it is hid
    ```bash
    pip install -r requirements.txt
 
-   chmod +x wafpass.py
-   sudo mv wafpass.py /usr/local/bin/wafpass
-
 ---
 
 ## Usage
@@ -59,31 +56,31 @@ If successful, the tool will reveal the real IP of the domain, even if it is hid
 - **`-d <domain>`**: Specify a single domain to scan.
   - Example:
     ```bash
-    wafpass -d example.com 
+    python wafpass.py -d example.com 
     ```
 
 - **`-dlist <file>`**: Specify a text file containing a list of domains (one per line).
   - Example:
     ```bash
-    wafpass -dlist domains.txt
+    python wafpass.py -dlist domains.txt
     ```
 
 - **`-dns`**: Use DNS method only for scanning.
   - Example:
     ```bash
-    wafpass -d example.com -dns
+    python wafpass.py -d example.com -dns
     ```
 
 - **`-osint`**: Use OSINT sources only for scanning.
   - Example:
     ```bash
-    wafpass -d example.com -osint
+    python wafpass.py -d example.com -osint
     ```
 
 - **`-all`**: Use both DNS and OSINT methods for scanning.
   - Example:
     ```bash
-    wafpass -d example.com -all
+    python wafpass.py -d example.com -all
     ```
 
 ---
