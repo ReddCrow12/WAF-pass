@@ -20,5 +20,12 @@ This tool allows you to bypass Web Application Firewalls (WAF) and find the real
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/waf-ip-bypass-tool.git
-   cd waf-ip-bypass-tool
+   git clone https://github.com/ReddCrow12/WAF-pass.git
+   cd WAF-pass
+2. Downlaods requirements:
+   
+   ```bash
+   pip install -r requirements.txt
+
+   chmod +x wafpass.py
+   sudo mv wafpass.py /usr/local/bin/wafpass
