@@ -1,0 +1,6 @@
+argparse
+socket
+requests
+dnspython
+subprocess
+termcolor
