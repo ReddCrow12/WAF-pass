@@ -88,11 +88,24 @@ def scan_ips(domain, method):
 
     print(colored("\n[+] Trying to bypass WAF...", "green"))
     for ip in ip_list:
+        # Check for HTTP
         try:
             url = f"http://{ip}"
             response = requests.get(url, headers={"Host": domain}, timeout=5)
-            if response.status_code < 400:
-                print(colored(f"\nReal IP of {domain} after WAF:", "yellow"))
+            if response.status_code == 200:
+                print(colored(f"\nReal IP of {domain} found using HTTP:", "yellow"))
+                print(colored("=================", "yellow"))
+                print(colored(ip, "white"))
+                return
+        except Exception as e:
+            pass
+
+        # Check for HTTPS
+        try:
+            url = f"https://{ip}"
+            response = requests.get(url, headers={"Host": domain}, timeout=5)
+            if response.status_code == 200:
+                print(colored(f"\nReal IP of {domain} found using HTTPS:", "yellow"))
                 print(colored("=================", "yellow"))
                 print(colored(ip, "white"))
                 return
@@ -100,6 +113,7 @@ def scan_ips(domain, method):
             pass
 
     print("[-] Could not bypass the WAF with the given IPs.")
+
 
 def extract_ips_from_text(text):
     """
