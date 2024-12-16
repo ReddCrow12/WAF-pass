@@ -88,4 +88,10 @@ If successful, the tool will reveal the real IP of the domain, even if it is hid
 
 ---
 
+## Screenshot
+
+![צילום מסך 2024-12-16 142829](https://github.com/user-attachments/assets/52ba44a4-771f-4a45-83c3-013bb9150dbd)
+![צילום מסך 2024-12-16 141956](https://github.com/user-attachments/assets/04f22713-0855-4260-a782-cfe8ef51ad4f)
+
+
 כעת תוכל להעתיק את זה ולהוסיף אותו לקובץ ה-`README.md` שלך תחת החלק של ה-Usage. אם יש עוד משהו שצריך לשנות או להוסיף, אני כאן!
